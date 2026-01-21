@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme-color" content="#05060a">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Esteban | Editor de Video</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+  /* Optimización mobile */
+  video{will-change:transform}
+  img{loading:lazy}
+  section{contain:layout paint}
+    :root{
+      --blue:#0a3cff;
+      --red:#ff003c;
+      --dark:#05060a;
+      --glass:rgba(255,255,255,0.06);
+    }*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:Poppins, sans-serif;
+  background:radial-gradient(circle at left,var(--blue),transparent 40%),
+             radial-gradient(circle at right,var(--red),transparent 40%),
+             var(--dark);
+  color:#fff;
+  overflow-x:hidden;
+}
+
+header{
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+
+header h1{
+  font-family:Orbitron;
+  font-size:4rem;
+  letter-spacing:4px;
+  animation:glow 3s infinite alternate;
+}
+
+header p{
+  margin-top:20px;
+  opacity:.8;
+  animation:fadeUp 2s ease forwards;
+}
+
+@keyframes glow{
+  from{text-shadow:0 0 10px var(--blue)}
+  to{text-shadow:0 0 25px var(--red)}
+}
+
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(40px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+section{
+  padding: clamp(60px, 8vw, 100px) clamp(16px, 5vw, 10%);
+  overflow-x: hidden;
+}
+
+
+.about{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:center;
+}
+
+.about img{
+  width:100%;
+  border-radius:20px;
+  box-shadow:0 0 40px rgba(0,0,0,.6);
+  animation:float 6s ease-in-out infinite;
+}
+
+@keyframes float{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-20px)}
+}
+
+.glass{
+  background:var(--glass);
+  backdrop-filter:blur(15px);
+  border-radius:20px;
+  padding:40px;
+  border:1px solid rgba(255,255,255,0.1);
+  animation:fadeUp 1.5s ease forwards;
+}
+
+h2{
+  font-family:Orbitron;
+  margin-bottom:20px;
+  background:linear-gradient(90deg,var(--blue),var(--red));
+  -webkit-background-clip:text;
+  color:transparent;
+}
+
+.skills{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:30px;
+  margin-top:40px;
+}
+
+.skill{
+  padding:30px;
+  border-radius:15px;
+  background:linear-gradient(135deg,rgba(10,60,255,.15),rgba(255,0,60,.15));
+  transition:.4s;
+}
+
+.skill:hover{
+  transform:translateY(-10px) scale(1.03);
+  box-shadow:0 0 25px rgba(255,0,60,.3);
+}
+
+footer{
+  padding:40px;
+  text-align:center;
+  opacity:.6;
+}
+
+@media(max-width:900px){
+
+header h1{font-size:2.5rem} section{padding:70px 6%} }
+
+@media(max-width:768px){ .about{ grid-template-columns:1fr; text-align:center; } .about img{ max-width:320px; margin:0 auto; } .skills{ grid-template-columns:1fr 1fr; } .portfolio{ grid-template-columns:1fr 1fr; } }
+
+@media(max-width:480px){ header h1{font-size:2rem} header p{font-size:.9rem} .skills, .portfolio{ grid-template-columns:1fr; } .card{ height:200px; } .modal-content{ width:95%; padding:20px; } .video-placeholder{ height:240px; } } header h1{font-size:2.5rem} } </style>
+
+  <!-- Google Analytics 4 -->  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script></head>
+<body><!-- INTRO CINEMATOGRÁFICA --><div id="intro">
+  <h1>ESTEBAN</h1>
+  <p>Editor de Video</p>
+</div><header>
+  <div>
+    <h1>ESTEBAN</h1>
+    <p>Editor de video especializado en reels llamativos y creativos para las redes sociales</p>
+  <!-- Flecha scroll -->
+  <div class="scroll-down">
+    <span></span>
+  </div>
+</div>
+</header>
+
+</div>
+</header><section class="about">
+  <div class="glass">
+    <h3>Sobre mí</h3>
+    <p>
+      Hola, soy Esteban. Editor de video con un enfoque moderno, creativo y experimental.
+      Trabajo principalmente con Reels, creando contenido dinámico que conecta y retiene.
+    </p>
+    <p style="margin-top:15px">
+      Mi estilo combina ritmo, narrativa visual y diseño sonoro para lograr videos
+      con impacto cinematográfico.
+    </p>
+  </div>  <!-- CAMBIA el src por el nombre real del archivo de la imagen -->  <img src="imagen.jpeg" alt="Esteban" />
+</section><section>
+ 
+  <h2>Habilidades</h2>
+<div class="skills"></div>             
+  
+  <div class="skills">
+    <div class="skill">Cortes dinámicos</div>
+    <div class="skill">Efectos visuales</div>
+    <div class="skill">Transiciones creativas</div>
+    <div class="skill">Subtítulos virales</div>
+    <div class="skill">Diseño sonoro (SFX)</div>
+  </div> 
+
+
+
+ <!-- HERRAMIENTAS -->
+ <h2>HERRAMIENTAS</h2>
+ <div>
+   
+   <div class="tools"></div>
+ 
+    <h3 class="sub-title">Software</h3>
+    <div class="tools">
+      <div class="tool">Adobe Premiere Pro</div>
+      <div class="tool">Adobe After Effects</div>
+      <div class="tool">CapCut</div>
+    </div>
+</section>
+
+
+</section><section id="portfolio">
+  <h2>Portafolio</h2>
+  <div class="portfolio">
+    <div class="card" data-video="video1.mp4"><video muted loop playsinline></video><span>Reel Cinematográfico</span></div>
+    <div class="card" data-video="video2.mp4"><video muted loop playsinline></video><span>Reel Publicitario</span></div>
+    <div class="card" data-video="video3.mp4"><video muted loop playsinline></video><span>Reel Creativo</span></div>
+    <div class="card" data-video="video4.mp4"><video muted loop playsinline></video><span>Reel Experimental</span></div>
+    <div class="card" data-video="video5.mp4"><video muted loop playsinline></video><span>Reel Experimental</span></div>
+
+  
+</section><style>
+  #portfolio{
+    position:relative;
+  }
+  .portfolio{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:30px;
+    margin-top:50px;
+  }
+  .card{
+    height:220px;
+    border-radius:20px;
+    position:relative;
+    overflow:hidden;
+    cursor:pointer;
+    transition:.5s;
+    background:#000;
+  }
+  .card video{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    opacity:.4;
+    transition:.5s;
+  }
+  .card span{
+    position:relative;
+    z-index:2;
+    font-family:Orbitron;
+  }
+  .card:hover video{
+    opacity:1;
+    transform:scale(1.1);
+  }
+  .card::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(120deg,transparent,rgba(255,255,255,.3),transparent);
+    transform:translateX(-100%);
+  }
+  .card:hover::before{
+    transform:translateX(100%);
+    transition:1s;
+  }
+  .card:hover{
+    transform:scale(1.08) rotate(-1deg);
+    box-shadow:0 0 40px rgba(255,0,60,.6);
+  }
+</style><section id="contact">
+  <h2>Contacto</h2>
+  <div class="contact-box">
+    <p>¿Tienes un proyecto en mente?</p>
+    <a class="cta" href="https://wa.me/18292100008?text=Hola%20Esteban%2C%20vi%20tu%20portafolio%20y%20quiero%20trabajar%20contigo" target="_blank">Trabajemos</a>
+    <div class="contact-info">
+      <p>📧 <a href="mailto:estebanhernandez4002@gmail.com">estebanhernandez4002@gmail.com</a></p>
+    </div>
+  </div>
+</section><style>
+  #contact{
+    text-align:center;
+  }
+  .contact-box{
+    margin-top:40px;
+    padding:50px;
+    border-radius:25px;
+    background:linear-gradient(135deg,rgba(10,60,255,.25),rgba(255,0,60,.25));
+    backdrop-filter:blur(15px);
+    animation:fadeUp 1.2s ease forwards;
+  }
+  .cta{
+    display:inline-block;
+    margin:30px 0;
+    padding:18px 50px;
+    border-radius:50px;
+    font-family:Orbitron;
+    font-size:1.1rem;
+    text-decoration:none;
+    color:#fff;
+    background:linear-gradient(90deg,var(--red),var(--blue));
+    box-shadow:0 0 30px rgba(255,0,60,.6);
+    transition:.4s;
+  }
+  .cta:hover{
+    transform:scale(1.08);
+    box-shadow:0 0 50px rgba(10,60,255,.8);
+  }
+  .contact-info a{
+    color:#fff;
+    opacity:.85;
+    text-decoration:none;
+  }
+</style><footer>
+  © 2025 • Esteban • Editor de Video
+</footer><!-- MODAL PORTAFOLIO --><div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div class="video-wrapper"></div>
+
+</div>
+</div><style>
+  /* INTRO */
+  #intro{
+    position:fixed;
+    inset:0;
+    background:#05060a;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    z-index:9999;
+    animation:introFade 3s forwards;
+  }
+  #intro h1{
+    font-family:Orbitron;
+    font-size:4rem;
+    letter-spacing:6px;
+    text-shadow:0 0 30px var(--red);
+  }
+  #intro p{opacity:.7;margin-top:10px}
+  @keyframes introFade{
+    0%{opacity:1}
+    70%{opacity:1}
+    100%{opacity:0;pointer-events:none}
+  }
+
+  /* MODAL */
+  .modal{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.85);
+    display:none;
+    align-items:center;
+    justify-content:center;
+    z-index:9998;
+  }
+  .modal-content{
+    width:80%;
+    max-width:900px;
+    background:linear-gradient(135deg,rgba(10,60,255,.3),rgba(255,0,60,.3));
+    border-radius:20px;
+    padding:30px;
+    position:relative;
+    animation:fadeUp 1s ease;
+  }
+  .close{
+    position:absolute;
+    top:10px;
+    right:10px;
+    font-size:2rem;
+    padding: 12px;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: white; 
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.6); 
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; 
+ 
+  }
+  .close:hover, .close:focus {
+  background-color: rgba(255, 255, 255, 0.6); /* Cambia el fondo al pasar el mouse o hacer focus */
+  transform: scale(1.1); /* Agranda el botón ligeramente al hacer hover */
+}
+.close:active {
+  transform: scale(1); /* Vuelve al tamaño normal al hacer clic */
+}
+ 
+ 
+  .video-placeholder{
+    height:400px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family:Orbitron;
+    border:2px dashed rgba(255,255,255,.3);
+  }
+</style><script>
+  // Intro
+  window.addEventListener('load',()=>{ setTimeout(()=>{ document.getElementById('intro').style.display='none'; },3000); });
+
+  // Modal portafolio
+  
+  // Modal portafolio
+
+
+  // Modal portafolio (videos responsive PC + móvil)
+  const cards = document.querySelectorAll('.card');
+  const modal = document.getElementById('modal');
+  const close = document.querySelector('.close');
+  const videoWrapper = document.querySelector('.video-wrapper');
+
+  cards.forEach(card => {
+    const preview = card.querySelector('video');
+
+    if (preview) {
+      preview.src = card.dataset.video;
+
+      // Hover solo en PC
+      card.addEventListener('mouseenter', () => preview.play());
+      card.addEventListener('mouseleave', () => preview.pause());
+    }
+
+    // Click → abrir modal con video responsive
+    card.addEventListener('click', () => {
+      modal.style.display = 'flex';
+
+      videoWrapper.innerHTML = `
+        <video 
+          src="${card.dataset.video}"
+          controls
+          autoplay
+          playsinline
+          webkit-playsinline
+        ></video>
+      `;
+    });
+  });
+
+  // Cerrar modal (X)
+  close.addEventListener('click', () => {
+    modal.style.display = 'none';
+    videoWrapper.innerHTML = '';
+  });
+
+  // Cerrar al hacer click fuera
+  modal.addEventListener('click', e => {
+    if (e.target === modal) {
+      modal.style.display = 'none';
+      videoWrapper.innerHTML = '';
+    }
+  });
+</script><script>
+  // Parallax background
+  document.addEventListener('mousemove',e=>{
+    const x=(e.clientX/window.innerWidth-0.5)*20;
+    const y=(e.clientY/window.innerHeight-0.5)*20;
+    document.body.style.backgroundPosition=`${x}px ${y}px`;
+  });
+
+
+  
+  // Scroll reveal agresivo
+  const reveals = document.querySelectorAll('section, .card, .skill, .glass');
+
+  const revealOnScroll = () => {
+    const trigger = window.innerHeight * 0.85;
+    reveals.forEach(el => {
+      const top = el.getBoundingClientRect().top;
+      if(top < trigger){
+        el.classList.add('show');
+      }
+    });
+  };
+
+  window.addEventListener('scroll', revealOnScroll);
+ revealOnScroll();
+
+
+  const scrollArrow = document.querySelector('.scroll-down');
+
+  if (scrollArrow) {
+    scrollArrow.addEventListener('click', () => {
+      document.querySelector('.about').scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  }
+</script>
+
+
+</script><style>
+  section, .card, .skill, .glass{
+    opacity:0;
+    transform:translateY(60px) scale(.95);
+    transition:1s cubic-bezier(.19,1,.22,1);
+  }
+
+  section.show, .card.show, .skill.show, .glass.show{
+    opacity:1;
+    transform:translateY(0) scale(1);
+  }
+
+  /* CONTENEDOR GENERAL */
+.skills-tools{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  margin-top:50px;
+}
+
+/* SUBTÍTULOS */
+.sub-title{
+  font-family:Orbitron;
+  margin-bottom:20px;
+  font-size:1.1rem;
+  opacity:.85;
+}
+
+/* HERRAMIENTAS */
+.tools{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:25px;
+}
+
+.tool{
+  padding:28px;
+  border-radius:15px;
+  background:linear-gradient(135deg,rgba(10,60,255,.15),rgba(255,0,60,.15));
+  transition:.4s;
+  text-align:left;
+}
+
+.tool:hover{
+  transform:translateY(-8px) scale(1.03);
+  box-shadow:0 0 25px rgba(10,60,255,.4);
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .skills-tools{
+    grid-template-columns:1fr;
+    text-align:center;
+  }
+}
+
+/* FLECHA SCROLL */
+.scroll-down{
+  margin-top:60px;
+  display:flex;
+  justify-content:center;
+  cursor:pointer;
+}
+
+.scroll-down span{
+  width:26px;
+  height:26px;
+  border-bottom:2px solid #fff;
+  border-right:2px solid #fff;
+  transform:rotate(45deg);
+  animation:scrollBounce 1.5s infinite;
+  opacity:.8;
+}
+
+@keyframes scrollBounce{
+  0%{
+    transform:rotate(45deg) translate(0,0);
+    opacity:.4;
+  }
+  50%{
+    transform:rotate(45deg) translate(6px,6px);
+    opacity:1;
+  }
+  100%{
+    transform:rotate(45deg) translate(0,0);
+    opacity:.4;
+  }
+}
+
+/* VIDEO RESPONSIVE MODAL */
+/* Contenedor del video */
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 600px;  /* Limita el tamaño máximo del video */
+  max-height: 80vh;  /* Limita la altura máxima para que no ocupe más del 80% de la ventana */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto; /* Centra el video dentro del modal */
+  padding-top: 20px; /* Deja espacio en la parte superior para el botón de cierre */
+}
+
+/* Video dentro del modal */
+.video-wrapper video {
+  width: 100%;
+  height: auto;
+  max-height: 80vh;  /* Ajusta el video para que no cubra el botón de cierre */
+  object-fit: contain;  /* Mantiene la proporción del video */
+  border-radius: 15px;
+}
+
+/* MÓVIL → formato vertical */
+/* Ajustes específicos para móviles */
+@media (max-width: 768px) {
+  /* Contenedor del video */
+  .video-wrapper {
+    max-width: 100%;  /* El video ocupará todo el ancho de la pantalla en móviles */
+    max-height: 70vh;  /* Limita la altura máxima para no ocupar mucho espacio vertical */
+    padding-top: 10px;  /* Reduce el espacio superior */
+  }
+
+  /* Video dentro del modal */  
+  .video-wrapper video {
+    width: 100%;  /* Asegura que el video ocupe todo el ancho */
+    height: auto;  /* Mantiene la proporción */
+    max-height: 70vh;  /* Reduce la altura del video en móviles */
+    object-fit: contain;  /* Ajusta el video para que no se recorte */
+  }
+
+  /* Estilo del botón de cerrar para móviles */
+  .close {
+    position: absolute;
+    top: 20px;  /* Distancia ajustada */
+    right: 20px;  /* Distancia ajustada */
+    font-size: 2.5rem;  /* Aumenta el tamaño del ícono en móviles */
+    padding: 18px;  /* Aumenta un poco más el área de clic */
+    width: 50px;  /* Botón más grande */
+    height: 50px;  /* Botón más grande */
+    background-color: rgba(255, 255, 255, 0.3);  /* Fondo semi-transparente */
+    color: white;  /* Texto blanco */
+    border-radius: 50%;  /* Botón redondeado */
+    border: 2px solid rgba(255, 255, 255, 0.6);  /* Borde sutil */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;  /* Efectos de transición */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;  /* Asegura que esté encima de otros elementos */
+  }
+
+  /* Efectos al pasar el mouse o hacer foco */
+  .close:hover, .close:focus {
+    background-color: rgba(255, 255, 255, 0.6);  /* Fondo más visible */
+    transform: scale(1.1);  /* Agranda el botón al hacer hover */
+    outline: none;  /* Elimina el borde del enfoque por defecto */
+  }
+
+  /* Efecto cuando se hace clic */
+  .close:active {
+    transform: scale(1);  /* Vuelve al tamaño normal al hacer clic */
+  }
+
+  /* Asegurar que el botón tenga un enfoque visible */
+  .close:focus {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);  /* Borde visible cuando se enfoca */
+    background-color: rgba(0, 0, 0, 0.4);  /* Fondo oscuro para mayor contraste */
+  }
+
+  /* Contraste mejorado para asegurar visibilidad */
+  .close:hover {
+    background-color: rgba(255, 255, 255, 0.8);  /* Fondo más claro en hover */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);  /* Sombra más fuerte en hover */
+  }
+}
+
+/* Ajuste para el correo electrónico en móviles */
+.contact-info p {
+  word-wrap: break-word; /* Divide palabras largas si es necesario */
+  white-space: normal; /* Permite múltiples líneas */
+  overflow-wrap: break-word; /* Asegura que las palabras se ajusten */
+  text-align: center; /* Centra el texto (opcional) */
+}
+
+header h1 {
+  font-size: clamp(1.6rem, 8vw, 4rem);
+  letter-spacing: 0.3em;
+}
+
+h2 {
+  font-size: clamp(1.4rem, 6vw, 3rem);
+}
+
+h3 {
+  font-size: clamp(1.2rem, 5vw, 2.2rem);
+}
+    
+
+
+h3 {
+  font-family: Orbitron;
+  font-size: 3.5rem;
+  background: linear-gradient(90deg, var(--blue), var(--red));  /* Fondo con gradiente */
+  -webkit-background-clip: text;
+  color: transparent;
+  padding: 20px;  /* Agregar padding para que el fondo se vea bien */
+  text-align: center;  /* Centrar el título */
+  letter-spacing: 3px;
+  border-radius: 10px;  /* Bordes redondeados */
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);  /* Sombra sutil alrededor */
+  margin-bottom: 40px;
+}
+
+
+h2 {
+  font-family: Orbitron;
+  font-size: 3.5rem;
+  color: var(--blue);
+  border-bottom: 4px solid var(--red);  /* Borde abajo */
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+  text-align: center;
+  letter-spacing: 2px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);  /* Sombra sutil alrededor */
+}
+
+
+/* TITULOS RESPONSIVE EN UNA SOLA LINEA */
+
+h1, h2, h3{
+  white-space: nowrap;
+  font-size: clamp(1.4rem, 4vw, 2.5rem);
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+.fit-text {
+  white-space: nowrap;
+  display: inline-block;
+  max-width: 100%;
+  line-height: 1.1;
+}
+
+
+
+</style></body>
+<script></script>
+<script>
+  function fitText(el, max = 4, min = 1) {
+    let size = max;
+    el.style.fontSize = size + 'rem';
+  
+    while (el.scrollWidth > el.parentElement.clientWidth && size > min) {
+      size -= 0.05;
+      el.style.fontSize = size + 'rem';
+    }
+  }
+  
+  function fitAll() {
+    document.querySelectorAll('.fit-text').forEach(el => {
+      fitText(el);
+    });
+  }
+  
+  window.addEventListener('load', fitAll);
+  window.addEventListener('resize', fitAll);
+  </script>
+  
+
+
+</html>
